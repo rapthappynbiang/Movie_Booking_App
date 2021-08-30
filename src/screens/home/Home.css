@@ -1,0 +1,18 @@
+.heading{
+    background-color:#ff9999;
+    padding:8px;
+    text-align:center;
+    font-size:1rem;
+}
+.flex-container{
+    display: flex;
+}
+.left{
+    display: flex;
+    flex-wrap: wrap;
+    width: 76%;
+    margin-right: 16px;
+}
+.movie-item:hover{
+    cursor: pointer;
+}
