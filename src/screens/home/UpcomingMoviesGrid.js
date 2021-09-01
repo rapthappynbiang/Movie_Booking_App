@@ -3,9 +3,8 @@ import ImageList from '@material-ui/core/ImageList';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 
-//upcoming movies
+//upcoming movies grid component
   export default function GridListUpcoming(props) {
-    debugger;
 
     return (
       <div>

@@ -5,6 +5,7 @@
     font-size:1rem;
 }
 .flex-container{
+    margin-top: 2%;
     display: flex;
 }
 .left{
@@ -15,4 +16,12 @@
 }
 .movie-item:hover{
     cursor: pointer;
+}
+.right{
+    display: flex;
+    width: 24%;
+    justify-content: center;
+}
+.apply:hover{
+    cursor: 'pointer';
 }
