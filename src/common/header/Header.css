@@ -1,8 +1,20 @@
 .header{
     background-color: #222;
-    height: 36px;
+    height: 53px;
     padding: 8px 32px 8px 16px;
+    display: flex;
+    justify-content: space-between;
 }
+.login-logout-button:hover{
+    cursor: pointer;
+}
+.book-movie-btn:hover{
+    cursor: pointer;
+}
+.book-movie-btn,.login-logout-button{
+    margin: 1px;
+}
+
 
 .logoSvg{
     background-color:#aa9191;

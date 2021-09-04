@@ -14,28 +14,31 @@ import artists from './artists'
 export default class Home extends Component{
     constructor(){
         super();
-        this.state={moviesData}
+        this.state={upcoming: {moviesData}, release: {moviesData}}
     }
     render(){
           return (
-            <div key="root-content">
-                <Header></Header>
+            <div key={"root-content"}>
+                <Header page="Home" ></Header>
 
-                <div key="upcoming-header-text" className="heading">
+                <div key={"upcoming-header-text"} className="heading">
                     <span>Upcoming Movies</span>
                 </div>
 
                 {/*Calling the ImageList component to display upcoming Movies*/}
-                <GridListUpcoming id="upcoming-movies-grid-list" moviesData={this.state.moviesData}/>
+                <GridListUpcoming id="upcoming-movies-grid-list-root" moviesData={this.state.upcoming.moviesData}/>
 
-                <div key="released-movies-and-filter-container" className="flex-container">
-                    <div id="released-movies-container" className="left">
+                <div key={"released-movies-and-filter-container"} className="flex-container">
+                    <div id="released-movies-container-root" className="left">
                         {/*Calling the ImageList component to display released Movies*/}
-                        <GridListReleased moviesData={this.state.moviesData} />
+                        <GridListReleased moviesData={this.state.release.moviesData} />
                     </div>
                     <div  id="filter-container" className="right">
                         {/*for movies filter*/}
-                        <MovieFilter genres ={genres} artists={artists} />
+                        <MovieFilter moviesData={moviesData} genres ={genres} artists={artists} applyFilters={(moviesData)=>{
+                                                                                             this.setState({release: this.state.release = {moviesData}})
+                                                                                            }}
+                        />
                     </div>
                </div>
             </div>

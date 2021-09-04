@@ -8,11 +8,12 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 
     return (
       <div>
-        <ImageList cols={5} style={{flexWrap: 'nowrap'}}>
+        <ImageList key="upcoming-grid-List-main" cols={5} style={{flexWrap: 'nowrap'}}>
           {props.moviesData.map((movie) => (
-            <ImageListItem key={movie.id} style={{height: 250}}>
+            <ImageListItem key={movie.id} id={movie.id} style={{height: 250}}>
               <img src={movie.poster_url} alt={movie.title} />
               <ImageListItemBar
+                key={"u-item-bar-"+movie.id}
                 title={movie.title}
               />
             </ImageListItem>
